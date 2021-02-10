@@ -147,7 +147,7 @@ public class ConstroAppController {
 //	}
 		HttpSession ses=req.getSession();
 //		ses.setAttribute("itemID", customerGroseryPageBO.getItemID());
-		Contact res=contactService.getContactDetails(status);
+		List<Contact> res = contactService.getContactDetails(status);
 		return new ModelAndView("contactList","res",res);
 	
 }

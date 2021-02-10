@@ -2,7 +2,7 @@
 
 <html>
 <body>
-	<h1 align="center">DoctorList</h1>
+	<h1 align="center">Customer List</h1>
 	<form action="">
 		<table border="1" align="center">
 			<tr>
@@ -28,7 +28,7 @@
 					<td>${re.customerSubject}</td>
 					<td>${re.customerMessage }</td>
 					<td>${re.status }</td>
-					<td>${re.customerDOB }</td>
+					<td>${re.customerContactCreateDate }</td>
 					<td><a href="get_doctors_data_byid/{status}?status=${re.status } ">View</a></td>
 					<td><a href="get_update_doctors_data_byid/{status}?status=${re.status }">Edit</a></td>
 				</tr>

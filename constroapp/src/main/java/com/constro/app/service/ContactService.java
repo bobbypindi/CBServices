@@ -13,6 +13,6 @@ public interface ContactService {
 //	List<Contact> getContactDetails(String status);
 
 
-	public Contact getContactDetails(String status);
+	public List<Contact> getContactDetails(String status);
 
 }

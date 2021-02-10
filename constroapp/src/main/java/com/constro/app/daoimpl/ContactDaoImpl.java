@@ -19,7 +19,7 @@ public class ContactDaoImpl implements ContactDao {
 	@Override
 	public int contactCustomer(Contact bo) { 
 		bo.setStatus("No");
-		int count=jdbcTemplate.update(DaoConstrains.SQL_CONTACT_CUSTOMER, bo.getCustomerName(),bo.getCustomerMobileNo(),bo.getCustomerAddress(),bo.getCustomerPincode(),bo.getCustomerSubject(),bo.getCustomerMessage(),bo.getStatus(),bo.getCustomerDOB());
+		int count=jdbcTemplate.update(DaoConstrains.SQL_CONTACT_CUSTOMER, bo.getCustomerName(),bo.getCustomerMobileNo(),bo.getCustomerAddress(),bo.getCustomerPincode(),bo.getCustomerSubject(),bo.getCustomerMessage(),bo.getStatus(),bo.getCustomerContactCreateDate());
 		return count;
 	}
 	@Override

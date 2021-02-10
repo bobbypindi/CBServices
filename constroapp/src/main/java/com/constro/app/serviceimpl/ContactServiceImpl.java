@@ -2,6 +2,7 @@ package com.constro.app.serviceimpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -25,14 +26,14 @@ public class ContactServiceImpl implements ContactService {
 			return "failure";
 	}
 	@Override
-	public Contact getContactDetails(String status) {
-		Contact cgp = new Contact();
+	public List<Contact> getContactDetails(String status) {
+		List<Contact> cgpList = new ArrayList<Contact>();
 		List<Contact> list = contactDao.getContactDetails(status);
 //		
 		Iterator itr = list.iterator();
 		while (itr.hasNext()) {
-			cgp = (Contact) itr.next();
-
+			Contact cgp = (Contact) itr.next();
+			cgpList.add(cgp);
 		}
 		
 //		Contact cgp = new Contact();
@@ -42,6 +43,6 @@ public class ContactServiceImpl implements ContactService {
 //			cgp = (CustomerGroseryPage) itr.next();
 //
 //		}
-		return cgp;
+		return cgpList;
 	}
 }

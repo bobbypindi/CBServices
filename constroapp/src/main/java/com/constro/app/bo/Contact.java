@@ -8,7 +8,7 @@ private String customerPincode;
 private String customerSubject;
 private String customerMessage;
 private String status;
-private String customerDOB;
+private String customerContactCreateDate;
 public String getCustomerName() {
 	return customerName;
 }
@@ -51,18 +51,21 @@ public String getStatus() {
 public void setStatus(String status) {
 	this.status = status;
 }
-public String getCustomerDOB() {
-	return customerDOB;
+public String getCustomerContactCreateDate() {
+	return customerContactCreateDate;
 }
-public void setCustomerDOB(String customerDOB) {
-	this.customerDOB = customerDOB;
+public void setCustomerContactCreateDate(String customerContactCreateDate) {
+	this.customerContactCreateDate = customerContactCreateDate;
 }
 @Override
 public String toString() {
 	return "Contact [customerName=" + customerName + ", customerMobileNo=" + customerMobileNo + ", customerAddress="
 			+ customerAddress + ", customerPincode=" + customerPincode + ", customerSubject=" + customerSubject
-			+ ", customerMessage=" + customerMessage + ", status=" + status + ", customerDOB=" + customerDOB + "]";
+			+ ", customerMessage=" + customerMessage + ", status=" + status + ", customerContactCreateDate="
+			+ customerContactCreateDate + "]";
 }
+
+
 
 
 
