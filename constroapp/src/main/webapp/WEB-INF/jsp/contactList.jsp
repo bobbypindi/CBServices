@@ -7,7 +7,7 @@
 		<table border="1" align="center">
 			<tr>
 				<th>Name</th>
-				<th>MobileNo</th>
+				<th>MobileNo</th>  
 				<th>Address</th>
 				<th>Pincode</th>
 				
