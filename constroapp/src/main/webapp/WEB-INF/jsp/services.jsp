@@ -124,7 +124,7 @@
 			<!--       </div> -->
 		</section>
 		<!--     End Breadcrumbs -->
-		<section id="about-us" class="about-us"> 
+		<section id="about-us" class="about-us">   
 			<div class="container" data-aos="fade-up">
 	<div class="section-title">
 					<h2>  
