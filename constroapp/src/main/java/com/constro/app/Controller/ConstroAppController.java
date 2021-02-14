@@ -54,6 +54,16 @@ public class ConstroAppController {
 	}
 	
 	
+	@GetMapping("/products")
+	public String products() {
+		return "products";
+	}
+	
+	@GetMapping("/services")
+	public String services() {
+		return "services";
+	}
+	
 	@GetMapping("/about")
 	public String about() {
 		return "about";

@@ -62,8 +62,8 @@
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
 					<li><a href="index2">Home</a></li>
-					<li><a href="">Products</a></li>
-					<li><a href="">Services</a></li>
+					<li><a href="products">Products</a></li>
+					<li><a href="services">Services</a></li>
 					<li class="active"><a href="">About</a></li>
 					<li><a href="contact">Contact</a></li>
 
