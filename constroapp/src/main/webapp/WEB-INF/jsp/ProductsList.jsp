@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Construction Bazaar - CustomerDetails</title>
+  <title>Construction Bazaar - Products Details</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,11 +13,13 @@
 <body>
 
 <div class="container">
-  <h2>CUSTOMER DETAILS</h2>
+  <h2>PRODUCTS & SERVICES DETAILS</h2>
+  <br>
   <table class="table">
     <thead>
       <tr>
-        <th>Name</th>
+      		   <th>PRODUCTS & SERVICES</th>  
+               <th>Name</th>
 				<th>MobileNo</th>  
 				<th>Address</th>
 				<th>Pincode</th>
@@ -32,7 +34,8 @@
     </thead>
     <tbody>
      <c:forEach var="re" items="${res}">
-				<tr  class="success">
+				<tr>
+					<td>${re.product}</td>
 					<td>${re.customerName}</td>
 					<td>${re.customerMobileNo }</td>
 					<td>${re.customerAddress }</td>
@@ -42,9 +45,11 @@
 					<td>${re.customerMessage }</td>
 					<td>${re.status }</td>
 					<td>${re.customerContactCreateDate }</td>
-					<td><a href="get_updateList?status=${re.status } ">View</a></td>
-					<td><a href="get_update_doctors_data_byid/{status}?status=${re.status }">Delete</a></td>
+					<td><a href="get_doctors_data_byid/{status}?status=${re.status } ">View</a></td>
+					<td><a href="get_update_doctors_data_byid/{status}?status=${re.status }">Edit</a></td>
+				
 				</tr>
+					
 			</c:forEach>
     </tbody>
   </table>

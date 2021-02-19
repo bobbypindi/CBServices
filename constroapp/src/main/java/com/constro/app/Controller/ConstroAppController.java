@@ -25,7 +25,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.constro.app.bo.CBELogin;
 import com.constro.app.bo.Contact;
+import com.constro.app.bo.Products;
 import com.constro.app.bo.exception.RestCustomException;
+import com.constro.app.productsService.ProductsService;
 import com.constro.app.service.CBELoginService;
 import com.constro.app.service.ContactService;
 
@@ -37,7 +39,8 @@ public class ConstroAppController {
 	@Autowired
 	private CBELoginService cbeLoginService;
 	
-	
+	@Autowired
+	private ProductsService productsService;
 	
 	@GetMapping("/")
 	public String index() {
@@ -74,6 +77,22 @@ public class ConstroAppController {
 	public String login() {
 		return "login";
 	}
+	
+	
+	
+	
+	
+	
+// Products ==============================================================
+	
+	
+	
+	
+	@GetMapping("/cementProducts")
+	public String cementProducts() {
+		return "cementProducts";
+	}
+	
 	
 	
 	//@RequestMapping(value = "CostomarContact", method = RequestMethod.POST)
@@ -139,28 +158,111 @@ public class ConstroAppController {
 	@GetMapping("/getContactDetails")
 	@Produces(MediaType.APPLICATION_JSON_VALUE)
 	@Consumes(MediaType.APPLICATION_JSON_VALUE)
-	public ModelAndView viewInterviewerTimeSchedule(@RequestParam("st") String status,HttpServletRequest req,@ModelAttribute Contact contact) {
-//		List<Contact> contactList = null;
-//		try {
-//			
-//			contactList = contactService.getContactDetails(status);  
-//			
-//		} catch (RestCustomException e) {
-//			System.err.println(e);
-//			throw new RestCustomException(e.getMessage());
-//		} catch (Exception e) {
-//			System.err.println(e);
-//			throw new RestCustomException("Internal Server Error Please Try Again Once ..!");
-//		}
-
-//		return new ResponseEntity<List<Contact>>(contactList, HttpStatus.OK);
-//	}
+	public ModelAndView getContactDetails(@RequestParam("st") String status,HttpServletRequest req,@ModelAttribute Contact contact) {
 		HttpSession ses=req.getSession();
 //		ses.setAttribute("itemID", customerGroseryPageBO.getItemID());
 		List<Contact> res = contactService.getContactDetails(status);
 		return new ModelAndView("contactList","res",res);
 	
 }
+	
+	
+	
+	
+//	EDIT PAGE =========================================
+	
+	
+	
+	@GetMapping("/get_updateList")
+	public ModelAndView getEditList(@RequestParam("status") String status,HttpServletRequest req,@ModelAttribute Contact Contact) {
+		HttpSession ses=req.getSession();
+		ses.setAttribute("status", Contact.getStatus());
+		Contact res=contactService.getEditResult(status);
+		return new ModelAndView("contactListEdit","res",res);
+		
+	}
+	
+	
+//	//@RequestMapping(value = "CostomarContact", method = RequestMethod.POST)
+//		@PostMapping("/updatedDetails")
+//		@Produces(MediaType.APPLICATION_JSON_VALUE)
+//		@Consumes(MediaType.APPLICATION_JSON_VALUE)
+//		public ResponseEntity<String> updatedDetails(@RequestBody Contact bo, HttpServletRequest req) {
+//
+//			HttpSession ses = req.getSession();
+//			String res = null;
+//			try {
+//				HttpSession session = req.getSession();
+//				res = contactService.updatedDetails(bo);
+//				if (res == "success") {
+////					session.setAttribute("updatedInterviewerUserName", interviewerDto.getEmail());
+////					session.setAttribute("updatedInterviewerIntcanId", interviewerDto.getIntCanId());
+//				}
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//				return new ResponseEntity<String>("fail", HttpStatus.OK);
+//			}
+//			return new ResponseEntity<String>(res, HttpStatus.OK);
+//		}
+
+	
+	
+	
+		
+		
+		@RequestMapping(value="/updatedDetails",method=RequestMethod.POST)
+		public ModelAndView updatedDetails(@ModelAttribute Contact bo) {
+			
+			String result=contactService.updatedDetails(bo);
+			return new ModelAndView("CustomerOrderSucsess","result",result);
+			
+		}
+		
+//===============================================================================================================================================		
+		
+//	Products  =============================================
+	
+
+	//@RequestMapping(value = "CostomarContact", method = RequestMethod.POST)
+	@PostMapping("/products")
+	@Produces(MediaType.APPLICATION_JSON_VALUE)
+	@Consumes(MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> products(@RequestBody Products bo, HttpServletRequest req) {
+
+		HttpSession ses = req.getSession();
+		String res = null;
+		try {
+			HttpSession session = req.getSession();
+			res = productsService.products(bo);
+			if (res == "success") {
+//				session.setAttribute("updatedInterviewerUserName", interviewerDto.getEmail());
+//				session.setAttribute("updatedInterviewerIntcanId", interviewerDto.getIntCanId());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity<String>("fail", HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(res, HttpStatus.OK);
+	}
+//Get Details ==================================
+	
+	
+	
+	@GetMapping("/getProductsDetails")
+	@Produces(MediaType.APPLICATION_JSON_VALUE)
+	@Consumes(MediaType.APPLICATION_JSON_VALUE)
+	public ModelAndView getProductsDetails(@RequestParam("st") String status,HttpServletRequest req,@ModelAttribute Products products) {
+//		
+		HttpSession ses=req.getSession();
+//		ses.setAttribute("itemID", customerGroseryPageBO.getItemID());
+		List<Products> res = productsService.getProductsDetails(status);
+		return new ModelAndView("ProductsList","res",res);
+	
+}
+	
+	
+	
+	
 	
 }
 	

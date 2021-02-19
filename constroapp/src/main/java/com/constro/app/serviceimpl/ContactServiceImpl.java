@@ -36,13 +36,28 @@ public class ContactServiceImpl implements ContactService {
 			cgpList.add(cgp);
 		}
 		
-//		Contact cgp = new Contact();
-//		List<Contact> list = contactDao.getContactDetails(status);
-//		Iterator itr = list.iterator();
-//		while (itr.hasNext()) {
-//			cgp = (CustomerGroseryPage) itr.next();
-//
-//		}
 		return cgpList;
+	}
+	
+	
+	
+	
+	@Override
+	public Contact getEditResult(String status) {
+		Contact cgp = new Contact();
+		List<Contact> list = contactDao.getEditList(status);
+		Iterator itr = list.iterator();
+		while (itr.hasNext()) {
+			cgp = (Contact) itr.next();
+
+		}
+		return cgp;	}
+	@Override
+	public String updatedDetails(Contact bo) {
+		int cnt = contactDao.updatedDetails(bo);
+		if (cnt != 0)
+			return "success";
+		else
+			return "failure";
 	}
 }

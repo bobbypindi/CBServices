@@ -15,4 +15,8 @@ public interface ContactService {
 
 	public List<Contact> getContactDetails(String status);
 
+	Contact getEditResult(String status);
+
+	String updatedDetails(Contact bo);
+
 }

@@ -36,9 +36,6 @@
 
 <link href="assets/css/style.css" rel="stylesheet">
 
-
-
-
 <!-- =======================================================
   * Template Name: Company - v2.1.0
   * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
@@ -54,11 +51,9 @@
 		<div class="container d-flex align-items-center">
 
 			<h1 class="logo mr-auto">
-			
-			
 				<a href=""><span>Construction Bazaar</span></a>
 			</h1>
-  
+
 			<!-- Uncomment below if you prefer to use an image logo -->
 			<!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -85,30 +80,11 @@
 			</div>
 
 		</div>
-		
-		<style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
 	</header>
 	<!-- End Header -->
 
 	<main id="main">
-    
+
 		<!-- ======= Breadcrumbs ======= -->
 		<section id="breadcrumbs" class="breadcrumbs">
 			<!--       <div class="container"> -->
@@ -124,91 +100,112 @@
 			<!--       </div> -->
 		</section>
 		<!--     End Breadcrumbs -->
-		<section id="about-us" class="about-us">
-			<div class="container" data-aos="fade-up">
-	<div class="section-title">
-					<h2>
-					     Products</strong>
-					</h2>
+
+		<!-- ======= Contact Section ======= -->
+		
+
+				<div class="row mt-5 justify-content-center" data-aos="fade-up">
+					<div class="col-lg-10">
+						<div id="error"></div>
+						<div class="section-title">
+							<h2>
+								<strong>YOUR DETAILS</strong>
+							</h2>
+						</div>
+						
+						<div class="form-group">
+							<label for="email"><strong></strong></label> <input
+								type="hidden" class="form-control" name="Products"
+								id="Products"  value="CementProduct"></input>
+							<div class="validate"></div>
+						</div>
+						<div class="form-row">
+							<div class="col-md-6 form-group">
+								<label for="email"><strong>Name:</strong></label> <input
+									type="text" name="CustomerName" class="form-control"
+									id="CustomerName" data-rule="required"
+									data-msg="Please write your name" placeholder="Your Name"></input>
+								<div class="validate"></div>
+							</div>
+							<div class="col-md-6 form-group">
+								<label for="email"><strong>MobileNo:</strong></label> <input
+									type="text" class="form-control" name="CustomerMobileNo"
+									id="CustomerMobileNo" placeholder="Your MobileNo"></input>
+								<div class="validate"></div>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="col-md-6 form-group">
+								<label for="email"><strong>Address:</strong></label> <input
+									type="text" name="CustomerAddress" class="form-control"
+									id="CustomerAddress" placeholder="Your Address"
+									data-rule="required" data-msg="Please write your address"></input>
+								<div class="validate"></div>
+							</div>
+							<div class="col-md-6 form-group">
+								<label for="email"><strong>PinCode:</strong></label> <input
+									type="text" class="form-control" name="CustomerPincode"
+									id="CustomerPincode" placeholder="Your PinCode"
+									data-rule="required" data-msg="Please write your pincode"></input>
+								<div class="validate"></div>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="email"><strong>Subject:</strong></label> <input
+								type="text" class="form-control" name="CustomerSubject"
+								id="CustomerSubject" placeholder="Subject" data-rule="required"
+								data-msg="Please write something for uss"></input>
+							<div class="validate"></div>
+						</div>
+						
+						
+						
+						
+						<div class="form-group">
+							<label for="email"><strong>Message:</strong></label>
+							<textarea class="form-control" name="CustomerMessage"
+								id="CustomerMessage" rows="5" data-rule="required"
+								data-msg="Please write something for us" placeholder="Message"></textarea>
+							<div class="validate"></div>
+						</div>
+						<div class="mb-3">
+							<div class="loading" align="center">
+
+
+								<div class="loader" id="loader"></div>
+							</div>
+							<strong>
+								<div align="center" id="successdemo" style="color: green;">
+								</div>
+							</strong> <strong>
+								<div align="center" id="demo" style="color: red;"></div>
+							</strong>
+						</div>
+						<div align="center">
+							<button type="submit" onclick="enterProducts()"
+								class="btn btn-success" style="align-content: center;">Send
+								Message</button>
+						</div>
+						<div class="modal-footer">
+
+							<!-- 													<button  onclick="enterContact()" -->
+							<!-- 														class="btn btn-primary">Reschedule</button> -->
+							<!-- 												</div> -->
+						</div>
+
+					</div>
+
 				</div>
-				</div>
-				</section>
+		</section>
+		<!-- End Contact Section -->
 
-
-
-
-
-<div class="row">
-  <div class="column">
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cementProducts"><img src="assets/img/team/team-1.jpg" alt="Snow" style="width:80%" ></a>
-  </div>
-  <div class="column">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="assets/img/team/team-2.jpg" alt="Forest" style="width:80%">
-  </div>
-  <div class="column">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/img/team/team-3.jpg" alt="Mountains" style="width:80%">
-  </div>
-  
-  
-</div>
-<!--  =================================================================================================================== -->
-<br>
-<div class="row">
-  <div class="column">
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/team/team-1.jpg" alt="Snow" style="width:80%" >
-  </div>
-  <div class="column">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="assets/img/team/team-2.jpg" alt="Forest" style="width:80%">
-  </div>
-  <div class="column">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/img/team/team-3.jpg" alt="Mountains" style="width:80%">
-  </div>
-  
-  
-</div>
-
-<!-- ========================================================================================================================== -->
-<br>
-<div class="row">
-  <div class="column">
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/team/team-1.jpg" alt="Snow" style="width:80%" >
-  </div>
-  <div class="column">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="assets/img/team/team-2.jpg" alt="Forest" style="width:80%">
-  </div>
-  <div class="column">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <label for="email" style="color: #ff8040;"><strong>CEMENT</strong></label><br>
-   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/img/team/team-3.jpg" alt="Mountains" style="width:80%">
-  </div>
-  
-  
-</div>
-
-</body>
-</html>
-	
-   
 	</main>
 	<!-- End #main -->
 
-<!-- ======= Footer ======= -->
+	<!-- ======= Footer ======= -->
 	<footer id="footer">
 
 		<div class="footer-top">
@@ -318,8 +315,10 @@
 <script>
 	$('#loader').hide();
 
-	function enterContact() {
+	function enterProducts() {
 		var data = {
+				
+				product : $("#Products").val(),
 			customerName : $("#CustomerName").val(),
 			customerMobileNo : $("#CustomerMobileNo").val(),
 			customerAddress : $("#CustomerAddress").val(),
@@ -332,7 +331,7 @@
 		var data2 = JSON.stringify(data)
 		$
 				.ajax({
-					url : './CostomarContact',
+					url : './products',
 					type : 'post',
 					contentType : 'application/json',
 					data : data2,

@@ -12,5 +12,9 @@ public interface ContactDao {
 
 	List<Contact> getContactDetails(String status);
 
+	List<Contact> getEditList(String status);
+
+	int updatedDetails(Contact bo);
+
 
 }

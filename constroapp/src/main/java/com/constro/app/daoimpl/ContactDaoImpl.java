@@ -29,6 +29,17 @@ public class ContactDaoImpl implements ContactDao {
 				new BeanPropertyRowMapper<>(Contact.class), status);
 		return list;
 	}
+	@Override
+	public List<Contact> getEditList(String status) {
+
+		List<Contact> list=jdbcTemplate.query(DaoConstrains.SQL_CONTACT_DATA, new BeanPropertyRowMapper(Contact.class),status);
+		return list;
+	}
+	@Override
+	public int updatedDetails(Contact bo) {
+		int count=jdbcTemplate.update(DaoConstrains.SQL_CONTACT_UPDATE,bo.getStatus(),bo.getCustomerName(),bo.getCustomerMobileNo(),bo.getCustomerPincode(),bo.getCustomerContactCreateDate());
+		return count;
+	}
 	
 
 }
