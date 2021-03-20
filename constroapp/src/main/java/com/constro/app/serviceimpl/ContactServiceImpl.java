@@ -43,9 +43,9 @@ public class ContactServiceImpl implements ContactService {
 	
 	
 	@Override
-	public Contact getEditResult(String status) {
+	public Contact getEditResult(int id) {
 		Contact cgp = new Contact();
-		List<Contact> list = contactDao.getEditList(status);
+		List<Contact> list = contactDao.getEditList(id);
 		Iterator itr = list.iterator();
 		while (itr.hasNext()) {
 			cgp = (Contact) itr.next();
@@ -59,5 +59,13 @@ public class ContactServiceImpl implements ContactService {
 			return "success";
 		else
 			return "failure";
+	}
+	@Override
+	public String deleteCustomer(Integer id) {
+		int res = contactDao.deleteCustomer(id);
+		if (res == 0)
+			return "Order Not Cancel";
+		else
+			return "Order Cancel";
 	}
 }

@@ -1,7 +1,5 @@
 package com.constro.app.service;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 import com.constro.app.bo.Contact;
@@ -15,8 +13,11 @@ public interface ContactService {
 
 	public List<Contact> getContactDetails(String status);
 
-	Contact getEditResult(String status);
+	Contact getEditResult(int id);
 
 	String updatedDetails(Contact bo);
+
+	String deleteCustomer(Integer id);
+
 
 }

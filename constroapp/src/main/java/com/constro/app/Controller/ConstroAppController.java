@@ -174,10 +174,10 @@ public class ConstroAppController {
 	
 	
 	@GetMapping("/get_updateList")
-	public ModelAndView getEditList(@RequestParam("status") String status,HttpServletRequest req,@ModelAttribute Contact Contact) {
+	public ModelAndView getEditList(@RequestParam("id") int id,HttpServletRequest req,@ModelAttribute Contact Contact) {
 		HttpSession ses=req.getSession();
 		ses.setAttribute("status", Contact.getStatus());
-		Contact res=contactService.getEditResult(status);
+		Contact res=contactService.getEditResult(id);
 		return new ModelAndView("contactListEdit","res",res);
 		
 	}
@@ -217,6 +217,21 @@ public class ConstroAppController {
 			return new ModelAndView("CustomerOrderSucsess","result",result);
 			
 		}
+		
+		
+		
+		
+		
+		@GetMapping("/delete_customer")
+		public ModelAndView deleteCustomer(@RequestParam("id") Integer id) {
+			
+			
+		String result=contactService.deleteCustomer(id);
+		
+			return new ModelAndView("contactList","result",result);
+			
+		}
+		
 		
 //===============================================================================================================================================		
 		
@@ -261,7 +276,43 @@ public class ConstroAppController {
 }
 	
 	
+//	get Details based on states ============================
 	
+	@GetMapping("/getProductsandServicesEditList")
+	public ModelAndView getProductsandServicesEditList(@RequestParam("id") Integer id,HttpServletRequest req,@ModelAttribute Products products) {
+		HttpSession ses=req.getSession();
+		Products res=productsService.getEditResult(id);
+		return new ModelAndView("ProductsandServicesListEdit","res",res);
+		
+	}
+	
+	
+	
+//	 Update Products and Services Details ==========================
+	
+	
+	@RequestMapping(value="/updateProductsandServicesDetails",method=RequestMethod.POST)
+	public ModelAndView updateProductsandServicesDetails(@ModelAttribute Products bo) {
+		
+		String result=productsService.updateProductsandServicesDetails(bo);
+		return new ModelAndView("CustomerOrderSucsess","result",result);
+		
+	}
+	
+	
+	
+//	Delete products and services details =============================
+	
+
+	@GetMapping("/delete_ProductsandServicesDetails")
+	public ModelAndView deleteProductsandServicesDetails(@RequestParam("id") Integer id) {
+		
+		
+	String result=productsService.deleteProductsandServicesDetails(id);
+	
+		return new ModelAndView("contactList","result",result);
+		
+	}
 	
 	
 }

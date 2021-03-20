@@ -10,4 +10,11 @@ public interface ProductsDao {
 
 	List<Products> getProductsDetails(String status);
 
+	List<Products> getEditList(Integer id);
+
+	int updatedDetails(Products bo);
+
+	int deleteDetails(Integer id);
+
+
 }

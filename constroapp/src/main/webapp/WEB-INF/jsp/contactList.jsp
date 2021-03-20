@@ -42,8 +42,8 @@
 					<td>${re.customerMessage }</td>
 					<td>${re.status }</td>
 					<td>${re.customerContactCreateDate }</td>
-					<td><a href="get_updateList?status=${re.status } ">View</a></td>
-					<td><a href="get_update_doctors_data_byid/{status}?status=${re.status }">Delete</a></td>
+					<td><a href="get_updateList?id=${re.id } ">View</a></td>
+					<td><a href="delete_customer?id=${re.id }">Delete</a></td>
 				</tr>
 			</c:forEach>
     </tbody>

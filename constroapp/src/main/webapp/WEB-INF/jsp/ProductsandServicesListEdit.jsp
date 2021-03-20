@@ -150,9 +150,9 @@
 </head>
 <body>
 
-<form action="updatedDetails" method="post">
+<form action="updateProductsandServicesDetails" method="post">
 <div class="container">
-  <h2>CUSTOMER DETAILS</h2>
+  <h2>PRODUCTS AND SERVICES DETAILS</h2>
   <table class="table">
     <thead>
       <tr>

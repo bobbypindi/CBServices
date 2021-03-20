@@ -43,5 +43,35 @@ public class ProductsServiceImpl implements ProductsService {
 		
 		return productsList;
 	}
+	@Override
+	public Products getEditResult(Integer id) {
+	
+		
+
+		
+			Products cgp = new Products();
+			List<Products> list = productsDao.getEditList(id);
+			Iterator itr = list.iterator();
+			while (itr.hasNext()) {
+				cgp = (Products) itr.next();
+
+			}
+			return cgp;	}
+	@Override
+	public String updateProductsandServicesDetails(Products bo) {
+			int cnt = productsDao.updatedDetails(bo);
+			if (cnt != 0)
+				return "success";
+			else
+				return "failure";
+		}
+	@Override
+	public String deleteProductsandServicesDetails(Integer id) {
+		int res = productsDao.deleteDetails(id);
+		if (res == 0)
+			return "Order Not Cancel";
+		else
+			return "Order Cancel";
+	}
 	}
 

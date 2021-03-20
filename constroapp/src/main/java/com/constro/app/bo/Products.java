@@ -1,7 +1,9 @@
 package com.constro.app.bo;
 
 public class Products {
-
+	
+	
+	private int id;
 	private String product;
 	private String customerName;
 	private String customerMobileNo;
@@ -11,6 +13,16 @@ public class Products {
 	private String customerMessage;
 	private String status;
 	private String customerContactCreateDate;
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getProduct() {
 		return product;
 	}

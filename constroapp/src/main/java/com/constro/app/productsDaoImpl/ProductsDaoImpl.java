@@ -30,5 +30,20 @@ public class ProductsDaoImpl implements ProductsDao {
 				new BeanPropertyRowMapper<>(Products.class), status);
 		return list;
 	}
+	@Override
+	public List<Products> getEditList(Integer id) {
+		List<Products> list=jdbcTemplate.query(DaoConstrains.SQL_PRODUCTSANDSERVICES_DATA, new BeanPropertyRowMapper(Products.class),id);
+		return list;
+	}
+	@Override
+	public int updatedDetails(Products bo) {
+		int count=jdbcTemplate.update(DaoConstrains.SQL_PRODUCTSANDSERVICES_UPDATE,bo.getStatus(),bo.getId());
+		return count;
+	}
+	@Override
+	public int deleteDetails(Integer id) {
+		int count=jdbcTemplate.update(DaoConstrains.SQL_PRODUCTSANDSERVICES_DELETE, id);
+		return count;
+	}
 
 }

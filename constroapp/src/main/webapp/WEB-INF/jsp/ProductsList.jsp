@@ -26,8 +26,9 @@
 				
 				<th>Subject</th>
 				<th>Message</th>
-				<th>Status</th>
+				
 				<th>Submited Date</th>
+				<th>Status</th>
 				<th>View</th>
 				<th>Edit</th>
       </tr>
@@ -43,10 +44,11 @@
 					
 					<td>${re.customerSubject}</td>
 					<td>${re.customerMessage }</td>
-					<td>${re.status }</td>
+					
 					<td>${re.customerContactCreateDate }</td>
-					<td><a href="get_doctors_data_byid/{status}?status=${re.status } ">View</a></td>
-					<td><a href="get_update_doctors_data_byid/{status}?status=${re.status }">Edit</a></td>
+					<td>${re.status }</td>
+					<td><a href="getProductsandServicesEditList?id=${re.id } ">View</a></td>
+					<td><a href="delete_ProductsandServicesDetails?id=${re.id }">Delete</a></td>
 				
 				</tr>
 					
